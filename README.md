@@ -16,7 +16,7 @@ Project Features:
 ## My Development Documentation Log
 
 ### 26/09/23
-19:00: As it will be a solo project, I used Chatgpt to generate a breakdown of the flow of task from planning to post launch to save my time and augment for the lack of a team on this project. Full breakdown is available here:- 
+19:00: As it will be a solo project, I used Chatgpt to generate a breakdown of the flow of task from planning to post launch to save my time and augment for the lack of a team on this project. Full breakdown is available here:- [Project Objective and Requirements](https://github.com/ebube-tech/streamfairs/blob/main/Clear%20Objectives%20and%20Requirements.md)
 
 19:30 pm: I started this project by deciding the name of this software would be "Streamfairs" and creating the Repo on Github. 
 
