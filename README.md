@@ -20,3 +20,12 @@ Project Features:
 
 19:30 pm: I started this project by deciding the name of this software would be "Streamfairs" and creating the Repo on Github. 
 
+21: 00 pm: 
+I set up the development environments and servers.
+Configure cloud infrastructure (if not already in place).
+
+22:00 pm: Setup user registration and login.
+
+23:00 pm: Implement user profile creation and customization.
+
+00:00 am: Begin integration of social media sign-up.
