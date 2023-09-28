@@ -29,3 +29,17 @@ Configure cloud infrastructure (if not already in place).
 23:00 pm: Implement user profile creation and customization.
 
 00:00 am: Begin integration of social media sign-up.
+
+01: 00 am: Finished Day 1 tasks. 
+
+### 27/09/23
+
+09: 00 am: I began developing an event creation interface. I decided to keep it all simple to avoid overwhelming myself. 
+
+11: 00 am: I started building event scheduling and calendar integration.
+
+02: 00 pm: I proceeded to continue event creation interface development.
+
+04: 00 pm: Then I went on to attempt to Integrate automated event reminders. I didn't over extend on this phase as I was confused on how to best to approach this. Would it be better as an automated bot?
+
+
