@@ -1,5 +1,6 @@
 @use "../constants/constants.scss" as *;
 @use "../mixins/mixins.scss" as *;
+@use "../mediaquery/media_query.scss" as *;
 
 * {
   margin: 0;
@@ -28,9 +29,9 @@ section {
     margin-left: 3vw;
   }
   .navlinks {
-    @include dimensions(4vh, 45vw);
+    @include dimensions(4vh, fit-content);
     margin-right: 3vw;
-    @include flex(row, space-between, center);
+    @include flex(row, center, center);
     .signUpLink {
       text-decoration: none;
       font-size: 0.9rem;
@@ -49,6 +50,7 @@ section {
       background-color: $white;
       @include flex(column, center, normal);
       border-radius: 5px;
+      margin-left: 2vw;
       padding: 0.8vh;
     }
     .talkToSalesLink {

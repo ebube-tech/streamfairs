@@ -1,5 +1,6 @@
 @use "../constants/constants.scss" as *;
 @use "../mixins/mixins.scss" as *;
+@use "../mediaquery/media_query.scss" as *;
 
 * {
   margin: 0;
@@ -182,107 +183,4 @@ section {
       height: 4vh;
     }
   }
-}
-
-
-@media screen and (min-width: 481px) {
-  .forms-container{
-    .form{
-      h1{
-        font-size: 3.5rem;
-      }
-      h3{
-        font-size: 1.5rem;
-      }
-      .input-box{
-        @include dimensions(7vh, 80vw);
-        input{
-          font-size: 1.2rem;
-          padding-right: 7.5vw;
-        }
-        i{
-          font-size: 1.5rem;
-        }
-      }
-      .forgot{
-        a{
-          font-size: 1.1rem;
-        }
-      }
-      .signup-link p{
-        font-size: 1.1rem;
-        a{
-          font-size: 1.1rem;
-        }
-      }
-      button{
-        font-size: 1.3rem;
-      }
-    }
-  }
-  .other-logins{
-    p{
-      font-size: 1.2rem;
-    }
-  }
-}
-
-
-@media screen and (min-width: 769px) {
-  .content{
-    @include flex(row, normal, normal);
-    .illustrations{
-      @include dimensions(94vh, 40vw);
-      img{
-        height: 32vh;
-      }
-    }
-    .forms-container{
-      @include dimensions(94vh, 60vw);
-      @include flex(column, center, center);
-      padding-top: 0;
-      .form{
-        width: max-content;
-        .input-box{
-          @include dimensions(7vh, 30vw);
-          input{
-            font-size: 0.9rem;
-            padding-left: 1.1vw;
-            padding-right: 3vw;
-          }
-          i{
-            font-size: 1.1rem;
-          }
-        }
-        .forgot{
-          a{
-            font-size: 0.9rem;
-            margin: 1vh;
-          }
-        }
-        .signup-link p{
-          font-size: 0.9rem;
-          a{
-            font-size: 0.9rem;
-            margin: 1vh;
-          }
-        }
-      }
-    }
-    .other-logins{
-      @include dimensions(15vh, fit-content);
-      .icons{
-        @include dimensions(4vh, 20vw);
-        img{
-          height: 5vh;
-        }
-      }
-    }
-  }
-}
-@media screen and (min-width: 1025px) {
-
-}
-@media screen and (min-width: 1201px) {
-
 }

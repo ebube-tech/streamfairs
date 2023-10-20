@@ -1,1 +1,102 @@
-/*# sourceMappingURL=media_query.css.map */
+@media screen and (min-width: 481px) {
+  .forms-container .form h1 {
+    font-size: 3.5rem;
+  }
+  .forms-container .form h3 {
+    font-size: 1.5rem;
+  }
+  .forms-container .form .input-box {
+    height: 7vh;
+    width: 80vw;
+  }
+  .forms-container .form .input-box input {
+    font-size: 1.2rem;
+    padding-right: 7.5vw;
+  }
+  .forms-container .form .input-box i {
+    font-size: 1.5rem;
+  }
+  .forms-container .form .forgot a {
+    font-size: 1.1rem;
+  }
+  .forms-container .form .signup-link p {
+    font-size: 1.1rem;
+  }
+  .forms-container .form .signup-link p a {
+    font-size: 1.1rem;
+  }
+  .forms-container .form button {
+    font-size: 1.3rem;
+  }
+  .other-logins p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: normal;
+  }
+  .content .illustrations {
+    height: 94vh;
+    width: 40vw;
+  }
+  .content .illustrations img {
+    height: 32vh;
+  }
+  .content .forms-container {
+    height: 94vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  .content .forms-container .form {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .content .forms-container .form .input-box {
+    height: 7vh;
+    width: 30vw;
+  }
+  .content .forms-container .form .input-box input {
+    height: 100%;
+    width: 100%;
+    font-size: 0.9rem;
+    padding-left: 1.1vw;
+    padding-right: 3vw;
+  }
+  .content .forms-container .form .input-box i {
+    font-size: 1.1rem;
+  }
+  .content .forms-container .form .forgot a {
+    font-size: 0.9rem;
+    margin: 1vh;
+  }
+  .content .forms-container .form button {
+    width: 30vw;
+  }
+  .content .forms-container .form .signup-link p {
+    font-size: 0.9rem;
+  }
+  .content .forms-container .form .signup-link p a {
+    font-size: 0.9rem;
+    margin: 1vh;
+  }
+  .content .other-logins {
+    height: 15vh;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .content .other-logins .icons {
+    height: 4vh;
+    width: 20vw;
+  }
+  .content .other-logins .icons img {
+    height: 5vh;
+  }
+}/*# sourceMappingURL=media_query.css.map */
