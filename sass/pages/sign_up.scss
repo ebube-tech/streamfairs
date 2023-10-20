@@ -1,0 +1,172 @@
+@use "../constants/constants.scss" as *;
+@use "../mixins/mixins.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+section {
+  @include dimensions(100vh, 100vw);
+  position: relative;
+}
+
+.navbar {
+  background-color: $dark;
+  @include dimensions(6vh, 100vw);
+  @include flex(row, space-between, center);
+  .trademark {
+    color: $grey;
+    font-family: $righteous;
+    font-size: 1.2rem;
+    margin-left: 3vw;
+  }
+  .navlinks {
+    @include dimensions(4vh, 45vw);
+    margin-right: 3vw;
+    @include flex(row, space-between, center);
+    .signUpLink {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: $light_blue;
+      font-family: $poppins;
+      -webkit-tap-highlight-color: transparent;
+      &:hover{
+        color: white;
+      }
+      &:active{
+        color: blue;
+      }
+    }
+    div {
+      height: 2vh;
+      background-color: $white;
+      @include flex(column, center, normal);
+      border-radius: 5px;
+      padding: 0.8vh;
+    }
+    .talkToSalesLink {
+      text-decoration: none;
+      font-size: 0.8rem;
+      color: $blue;
+      font-family: $poppins;
+      font-weight: bold;
+      -webkit-tap-highlight-color: transparent;
+      &:active{
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+}
+.illustrations {
+  @include dimensions(20vh, 100vw);
+  @include flex(row, center, center);
+  background-color: $blue;
+  img {
+    height: 18vh;
+  }
+}
+
+.forms-container {
+  @include dimensions(74vh, 100vw);
+  @include flex(column, start, center);
+  padding-top: 2vh;
+  .form { 
+    width: 100vw;
+    color: rgb(0, 0, 0); 
+    font-family: $poppins;
+    @include flex(column, center, center);
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    .input-box {
+      @include dimensions(7vh, 90vw);
+      margin: 2vh 0;
+      position: relative;
+      @include flex(row, end, center);
+      input {
+        @include dimensions(100%, 100%);
+        background: transparent;
+        border: none;
+        outline: none;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 40px;
+        font-size: 0.9rem;
+        color: black;
+        font-family: $poppins;
+        padding-left: 5vw;
+        padding-right: 10vw;
+        &::placeholder {
+          color: rgb(0, 0, 0);
+        }
+      }
+      i {
+        position: absolute;
+        margin-right: 2vh;
+        font-size: 1.3rem;
+        color: black;
+      }
+    }
+    .forgot {
+      @include flex(row, end, start);
+      margin-bottom: 2vh;
+      a {
+        text-decoration: none;
+        font-size: 0.9rem;
+        -webkit-tap-highlight-color: transparent;
+          &:active{
+            color: blue;
+          }
+      }
+    }
+    .signup-link p {
+      margin-bottom: 3vh;
+      font-size: 1rem;
+      a {
+        font-size: 0.9rem;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+          &:active{
+            color: blue;
+          }
+      }
+    }
+    button {
+      @include dimensions(7vh, 100%);
+      border-radius: 40px;
+      background-color: $light_blue;
+      border: none;
+      font-size: 1rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+      font-family: $poppins;
+      margin-bottom: 2vh;
+    }
+  }
+} 
+.other-logins {
+  @include dimensions(10vh, 100vw); 
+  @include flex(column, space-around, center);
+  p {
+    color: black;
+    font-family: $poppins;
+    font-weight: bold;
+  }
+  .icons {
+    @include dimensions(4vh, 40vw);
+    @include flex(row, space-evenly, center);
+    a{
+        -webkit-tap-highlight-color: transparent;
+    }
+    img {
+      height: 4vh;
+    }
+  }
+}

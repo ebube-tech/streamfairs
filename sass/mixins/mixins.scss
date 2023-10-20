@@ -1,0 +1,13 @@
+
+//reusable styles
+@mixin dimensions($height, $width){
+    height: $height;
+    width: $width;
+}
+
+@mixin flex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
