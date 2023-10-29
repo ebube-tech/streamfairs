@@ -111,6 +111,7 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  background-color: hsl(240, 100%, 97%);
 }
 
 section {
@@ -129,7 +130,7 @@ section {
   align-items: center;
 }
 .navbar .trademark {
-  color: rgb(235, 239, 255);
+  color: #dbdff0;
   font-family: "Righteous", sans-serif;
   font-size: 1.2rem;
   margin-left: 3vw;
@@ -235,7 +236,7 @@ section {
   background: transparent;
   border: none;
   outline: none;
-  border: 2px solid rgb(0, 0, 0);
+  border: 1.5px solid rgb(0, 0, 0);
   border-radius: 40px;
   font-size: 0.9rem;
   color: black;

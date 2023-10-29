@@ -16,6 +16,7 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
   user-select: none;
+  background-color: $white;
 }
 
 section {
@@ -104,7 +105,7 @@ section {
         background: transparent;
         border: none;
         outline: none;
-        border: 2px solid rgb(0, 0, 0);
+        border: 1.5px solid rgb(0, 0, 0);
         border-radius: 40px;
         font-size: 0.9rem;
         color: black;

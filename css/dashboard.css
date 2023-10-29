@@ -182,7 +182,7 @@ body {
   font-family: "Poppins", sans-serif;
   margin-bottom: 2rem;
   border-radius: 1rem;
-  border: 1px solid #2c3242;
+  border: 1.5px solid #2c3242;
   outline: none;
 }
 .dashboard_content .dashboard_inputs form .details .fields .input-fields a {
