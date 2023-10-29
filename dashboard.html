@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Streamfairs | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <p class="trademark">StreamFairs</p>
+      <p class="title">Dashboard</p>
+      <div class="user_action_menu">
+        <a class="notification" href="#" target="_parent">
+          <i class="bx bxs-bell"></i>
+        </a>
+        <p class="user_name">Username</p>
+        <div class="dropdown">
+          <a class="user_menu" href="#" target="_parent"><div></div></a>
+          <div class="dropdown-content" id="dropdown-content">
+            <a class="dashboard" href="#">Dashboard</a>
+            <a class="events" href="#">My Events</a>
+            <a class="accounts" href="#">Switch Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard_content">
+      <div class="heading_and_profile">
+        <h3>Profile Information</h3>
+        <div class="user_pfp_and_control">
+          <div class="user_pfp"></div>
+          <a href="#" target="_parent"><h3>Update Profile Picture</h3></a>
+        </div>
+      </div>
+      <div class="dashboard_inputs">
+        <form action="#" class="" id="">
+          <div class="details">
+            <div class="fields">
+              <div class="input-fields">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" required>
+                <label>Username</label>
+                <input type="text" placeholder="Enter username" required>
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+                <label>Phone Number</label>
+                <input type="number" placeholder="Enter your phone number" required>
+                <label>Date Of Birth</label>
+                <input type="date" placeholder="Enter your date of birth" required>
+                <label>Bio</label>
+                <textarea placeholder="Enter your bio" rows="10" ></textarea>
+                <!-- <a href="#" target="_parent"><h3>Change Password?</h3></a> -->
+                <div>
+                  <button onclick="" type="submit">Save</button>
+                  <button onclick="" type="submit">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

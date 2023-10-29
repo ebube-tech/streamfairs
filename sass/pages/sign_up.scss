@@ -1,11 +1,16 @@
 @use "../constants/constants.scss" as *;
 @use "../mixins/mixins.scss" as *;
-@use "../mediaquery/media_query.scss" as *;
+@use "../mediaquery/signIn-signUp_MQ.scss" as *;
 
 * {
   margin: 0;
   padding: 0;
 }
+
+// html{
+//   font-size: 62.5%;
+//   height: -webkit-fill-availabe;
+// }
 
 body {
   overflow-y: hidden;
@@ -38,10 +43,10 @@ section {
       color: $light_blue;
       font-family: $poppins;
       -webkit-tap-highlight-color: transparent;
-      &:hover{
+      &:hover {
         color: white;
       }
-      &:active{
+      &:active {
         color: blue;
       }
     }
@@ -60,7 +65,7 @@ section {
       font-family: $poppins;
       font-weight: bold;
       -webkit-tap-highlight-color: transparent;
-      &:active{
+      &:active {
         color: rgb(0, 0, 0);
       }
     }
@@ -79,9 +84,9 @@ section {
   @include dimensions(74vh, 100vw);
   @include flex(column, start, center);
   padding-top: 2vh;
-  .form { 
+  .form {
     width: 100vw;
-    color: rgb(0, 0, 0); 
+    color: rgb(0, 0, 0);
     font-family: $poppins;
     @include flex(column, center, center);
     h1 {
@@ -124,9 +129,9 @@ section {
         text-decoration: none;
         font-size: 0.9rem;
         -webkit-tap-highlight-color: transparent;
-          &:active{
-            color: blue;
-          }
+        &:active {
+          color: blue;
+        }
       }
     }
     .signup-link p {
@@ -136,9 +141,9 @@ section {
         font-size: 0.9rem;
         text-decoration: none;
         -webkit-tap-highlight-color: transparent;
-          &:active{
-            color: blue;
-          }
+        &:active {
+          color: blue;
+        }
       }
     }
     button {
@@ -152,9 +157,9 @@ section {
       margin-bottom: 2vh;
     }
   }
-} 
+}
 .other-logins {
-  @include dimensions(10vh, 100vw); 
+  @include dimensions(10vh, 100vw);
   @include flex(column, space-around, center);
   p {
     color: black;
@@ -164,8 +169,8 @@ section {
   .icons {
     @include dimensions(4vh, 40vw);
     @include flex(row, space-evenly, center);
-    a{
-        -webkit-tap-highlight-color: transparent;
+    a {
+      -webkit-tap-highlight-color: transparent;
     }
     img {
       height: 4vh;

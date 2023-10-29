@@ -129,7 +129,7 @@ section {
   align-items: center;
 }
 .navbar .trademark {
-  color: #f1f2f5;
+  color: rgb(235, 239, 255);
   font-family: "Righteous", sans-serif;
   font-size: 1.2rem;
   margin-left: 3vw;
@@ -147,7 +147,7 @@ section {
 .navbar .navlinks .signUpLink {
   text-decoration: none;
   font-size: 0.9rem;
-  color: #d6e3ff;
+  color: hsl(240, 100%, 90%);
   font-family: "Poppins", sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
@@ -159,7 +159,7 @@ section {
 }
 .navbar .navlinks div {
   height: 2vh;
-  background-color: #ffffff;
+  background-color: hsl(240, 100%, 98%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,7 +283,7 @@ section {
   height: 7vh;
   width: 100%;
   border-radius: 40px;
-  background-color: #d6e3ff;
+  background-color: hsl(240, 100%, 90%);
   border: none;
   font-size: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
@@ -317,4 +317,4 @@ section {
 }
 .other-logins .icons img {
   height: 4vh;
-}/*# sourceMappingURL=sign_up.css.map */
+}
