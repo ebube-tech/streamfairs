@@ -48,7 +48,7 @@
           <a href="#" target="_parent"><h3>Update Profile Picture</h3></a>
         </div>
       </div>
-      <div class="dashboard_inputs">
+      <div class="dashboard_inputs" id="dashboard_inputs">
         <form action="#" class="" id="">
           <div class="details">
             <div class="fields">
@@ -65,10 +65,35 @@
                 <input type="date" placeholder="Enter your date of birth" required>
                 <label>Bio</label>
                 <textarea placeholder="Enter your bio" rows="10" ></textarea>
-                <!-- <a href="#" target="_parent"><h3>Change Password?</h3></a> -->
                 <div>
-                  <button onclick="" type="submit">Save</button>
-                  <button onclick="" type="submit">Cancel</button>
+                  <button onclick="saveDashboard()" type="submit">Save</button>
+                  <button onclick="cancelDashboard()" type="submit">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="dashboard_display" id="dashboard_display">
+        <div class="form_container">
+          <div class="details">
+            <div class="fields">
+              <div class="display-fields">
+                <h2>Full Name</h2>
+                <div class="display"><p>Appiah Kelvin</p></div>
+                <h2>Username</h2>
+                <div class="display"><p>Kelvin1234</p></div>
+                <h2>Email Address</h2>
+                <div class="display"><p>appiahkelvin@gmail.com</p></div>
+                <h2>Phone Number</h2>
+                <div class="display"><p>0257417254</p></div>
+                <h2>Date Of Birth</h2>
+                <div class="display"><p>06/09/2004</p></div>
+                <h2>Bio</h2>
+                <textarea rows="10" disabled>Just Me</textarea>
+                <a href="#" target="_parent"><h3>Change Password?</h3></a>
+                <div>
+                  <button onclick="editDashboard()" type="submit">Edit</button>
                 </div>
               </div>
             </div>
@@ -76,5 +101,19 @@
         </form>
       </div>
     </div>
+    <script>
+      function editDashboard() {
+        document.getElementById('dashboard_display').style.display= 'none';
+        document.getElementById('dashboard_inputs').style.display= 'flex';
+      }
+      function saveDashboard() {
+        document.getElementById('dashboard_display').style.display= 'flex';
+        document.getElementById('dashboard_inputs').style.display= 'none';
+      }
+      function cancelDashboard() {
+        document.getElementById('dashboard_display').style.display= 'flex';
+        document.getElementById('dashboard_inputs').style.display= 'none';
+      }
+    </script>
   </body>
 </html>
