@@ -20,7 +20,6 @@ body {
 }
 
 .navbar {
-  width: 100svw;
   @include flex(row, space-between, center);
   .trademark {
     color: $blue;
@@ -36,7 +35,7 @@ body {
   .user_action_menu {
     @include flex(row, space-between, center);
     width: 8rem;
-    margin: 0 2.5rem;
+    margin: 0 2rem;
     .notification {
       -webkit-tap-highlight-color: transparent;
       i {
@@ -98,7 +97,7 @@ body {
     padding: 3rem 0;
     flex: 2;
     text-align: center;
-    max-height: 40rem;
+    max-height: 40rem; 
     @include flex(column, center, center);
     gap: 3rem;
     h3 {
@@ -111,6 +110,7 @@ body {
       .user_pfp {
         min-height: 20rem;
         min-width: 20rem;
+        margin: 1rem;
         border-radius: 50%;
         background-image: url(../../assets/icons/user.png);
         background-size: cover;
@@ -204,7 +204,7 @@ body {
     justify-content: center;
     align-items: center;
     .form_container {
-      min-width: 90%;
+      min-width: 80%;
       .details {
         margin-top: 1rem;
         .fields {

@@ -18,7 +18,6 @@ body {
 }
 
 .navbar {
-  width: 100svw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -41,7 +40,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 8rem;
-  margin: 0 2.5rem;
+  margin: 0 2rem;
 }
 .navbar .user_action_menu .notification {
   -webkit-tap-highlight-color: transparent;
@@ -128,6 +127,7 @@ body {
 .dashboard_content .heading_and_profile .user_pfp_and_control .user_pfp {
   min-height: 20rem;
   min-width: 20rem;
+  margin: 1rem;
   border-radius: 50%;
   background-image: url(../../assets/icons/user.png);
   background-size: cover;
@@ -224,7 +224,7 @@ body {
   align-items: center;
 }
 .dashboard_content .dashboard_display .form_container {
-  min-width: 90%;
+  min-width: 80%;
 }
 .dashboard_content .dashboard_display .form_container .details {
   margin-top: 1rem;

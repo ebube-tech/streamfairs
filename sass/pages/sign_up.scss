@@ -1,46 +1,51 @@
+//imports
 @use "../constants/constants.scss" as *;
 @use "../mixins/mixins.scss" as *;
 @use "../mediaquery/signIn-signUp_MQ.scss" as *;
 
 * {
+  //defaults 
   margin: 0;
   padding: 0;
 }
 
-// html{
-//   font-size: 62.5%;
-//   height: -webkit-fill-availabe;
-// }
+html {
+  /*used this to scale the default value for pixels which 
+  is 16px to a product of 10, so now 1rem is no more 16px,
+  but rather 1rem is 10px. mainly to avoid heptic calculations*/
+  font-size: 62.5%;
+  /*a method used to ignore scroll browser elements such as bars, navbars and bottom navbars
+  of various device from the viewport, elements now rather occupies the space left aside from the browser elements*/
+  height: -webkit-fill-availabe;
+}
 
 body {
-  overflow-y: hidden;
+  overflow-y: scroll;
   overflow-x: hidden;
   user-select: none;
   background-color: $white;
 }
-
-section {
-  @include dimensions(100vh, 100vw);
-  position: relative;
-}
-
+/*welcome to sass or scss where the styling is now arranged in a scope manner.
+all properties contained in other properties are sub-elements of that property in the html aswell*/
 .navbar {
   background-color: $dark;
-  @include dimensions(6vh, 100vw);
+  /* the following is a feature of sass to create reusable codes
+  known as Mixins which can be inported into and other sass files for use*/
   @include flex(row, space-between, center);
   .trademark {
+    //another feature in sass that allows the use ov variables
     color: $grey;
     font-family: $righteous;
-    font-size: 1.2rem;
-    margin-left: 3vw;
+    font-size: 1.92rem;
+    padding: 1rem 1.5rem;
   }
-  .navlinks {
-    @include dimensions(4vh, fit-content);
-    margin-right: 3vw;
-    @include flex(row, center, center);
-    .signUpLink {
+  .navbar_links {
+    width: 16rem; 
+    margin: 0 1.5rem;
+    @include flex(row, space-between, center);
+    .signUp_link {
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 1.4rem;
       color: $light_blue;
       font-family: $poppins;
       -webkit-tap-highlight-color: transparent;
@@ -52,16 +57,14 @@ section {
       }
     }
     div {
-      height: 2vh;
       background-color: $white;
       @include flex(column, center, normal);
-      border-radius: 5px;
-      margin-left: 2vw;
-      padding: 0.8vh;
+      border-radius: 3px;
+      padding: 0.5rem;
     }
-    .talkToSalesLink {
+    .talk_to_sales_link {
       text-decoration: none;
-      font-size: 0.8rem;
+      font-size: 1.3rem;
       color: $blue;
       font-family: $poppins;
       font-weight: bold;
@@ -71,110 +74,121 @@ section {
       }
     }
   }
-}
-.illustrations {
-  @include dimensions(20vh, 100vw);
-  @include flex(row, center, center);
-  background-color: $blue;
-  img {
-    height: 18vh;
-  }
-}
-
-.forms-container {
-  @include dimensions(74vh, 100vw);
-  @include flex(column, start, center);
-  padding-top: 2vh;
-  .form {
-    width: 100vw;
-    color: rgb(0, 0, 0);
-    font-family: $poppins;
-    @include flex(column, center, center);
-    h1 {
-      font-size: 3rem;
-      text-align: center;
-      font-weight: bold;
+} 
+.page_content {
+  .illustration {
+    background-color: $blue;
+    display: grid;
+    justify-content: center;
+    padding: 1.5rem 0;
+    img {
+      width: 18rem;
     }
-    .input-box {
-      @include dimensions(7vh, 90vw);
-      margin: 2vh 0;
-      position: relative;
-      @include flex(row, end, center);
-      input {
-        @include dimensions(100%, 100%);
-        background: transparent;
-        border: none;
-        outline: none;
-        border: 1.5px solid rgb(0, 0, 0);
-        border-radius: 40px;
-        font-size: 0.9rem;
+  }
+ 
+  .forms_container {
+    @include flex(column, center, center);
+    padding-top: 2rem;
+    .form {
+      color: rgb(0, 0, 0); 
+      min-width: 50%;
+      font-family: $poppins;
+      @include flex(column, center, center);
+      form {
+        min-width: 100%;
+        h1 {
+          font-size: 4rem;
+          text-align: center;
+          font-weight: bold;
+        }
+        .input_box {
+          margin: 2rem 0; 
+          border-radius: 40px;
+          position: relative;
+          @include flex(row, end, center);
+          input {
+            @include dimensions(100%, 100%);
+            background: transparent;
+            outline: none;
+            border: 1.5px solid rgb(0, 0, 0);
+            border-radius: 40px;
+            font-size: 1.4rem;
+            color: black; 
+            font-family: $poppins;
+            padding: 1.5rem 6rem 1.5rem 3rem;
+          }
+          i {
+            position: absolute;
+            padding: 2rem 2rem;
+            font-size: 2rem;
+            color: black;
+          }
+        }
+        .forgot {
+          text-align: end;
+          margin-bottom: 2rem;
+          a {
+            text-decoration: none;
+            font-size: 1.4rem;
+            -webkit-tap-highlight-color: transparent;
+            color: $blue;
+            &:hover {
+              color: rgb(255, 0, 0);
+            }
+            &:active {
+              color: blue;
+            }
+          }
+        }
+        button {
+          min-width: 100%;
+          padding: 2rem 0;
+          border-radius: 40px;
+          background-color: $light_blue;
+          border: none;
+          font-size: 1.5rem;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+          margin-bottom: 2rem;
+          font-family: $poppins;
+        }
+        .signup_link p {
+          margin-bottom: 2rem;
+          font-size: 1.4rem;
+          a {
+            font-size: 1.4rem;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            color: $blue;
+            &:hover {
+              color: rgb(255, 0, 0);
+            }
+            &:active {
+              color: blue;
+            }
+          }
+        }
+      }
+    }
+    .other_logins {
+      @include flex(column, space-around, center);
+      p {
+        padding: 0 0 1.5rem 0;
         color: black;
         font-family: $poppins;
-        padding-left: 5vw;
-        padding-right: 10vw;
-        &::placeholder {
-          color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
+      .icons { 
+        min-width: 20rem;
+        padding: 0 0 2rem 0;
+        @include flex(row, space-evenly, center);
+        a {
+          -webkit-tap-highlight-color: transparent;
+          img {
+            width: 4rem;
+          }
         }
       }
-      i {
-        position: absolute;
-        margin-right: 2vh;
-        font-size: 1.3rem;
-        color: black;
-      }
-    }
-    .forgot {
-      @include flex(row, end, start);
-      margin-bottom: 2vh;
-      a {
-        text-decoration: none;
-        font-size: 0.9rem;
-        -webkit-tap-highlight-color: transparent;
-        &:active {
-          color: blue;
-        }
-      }
-    }
-    .signup-link p {
-      margin-bottom: 3vh;
-      font-size: 1rem;
-      a {
-        font-size: 0.9rem;
-        text-decoration: none;
-        -webkit-tap-highlight-color: transparent;
-        &:active {
-          color: blue;
-        }
-      }
-    }
-    button {
-      @include dimensions(7vh, 100%);
-      border-radius: 40px;
-      background-color: $light_blue;
-      border: none;
-      font-size: 1rem;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-      font-family: $poppins;
-      margin-bottom: 2vh;
-    }
-  }
-}
-.other-logins {
-  @include dimensions(10vh, 100vw);
-  @include flex(column, space-around, center);
-  p {
-    color: black;
-    font-family: $poppins;
-    font-weight: bold;
-  }
-  .icons {
-    @include dimensions(4vh, 40vw);
-    @include flex(row, space-evenly, center);
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-    img {
-      height: 4vh;
     }
   }
 }
