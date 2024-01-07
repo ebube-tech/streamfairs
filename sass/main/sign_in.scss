@@ -1,10 +1,10 @@
 //imports
 @use "../constants/constants.scss" as *;
 @use "../mixins/mixins.scss" as *;
-@use "../mediaquery/signIn-signUp_MQ.scss" as *;
+@use "../mediaquery/signIn-signUp_MQ.scss" as media;
 
 * {
-  //defaults 
+  //defaults
   margin: 0;
   padding: 0;
 }
@@ -38,15 +38,22 @@ all properties contained in other properties are sub-elements of that property i
     font-family: $righteous;
     font-size: 1.92rem;
     padding: 1rem 1.5rem;
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 1s;
+    }
   }
   .navbar_links {
-    width: 16rem; 
+    width: 16rem;
     margin: 0 1.5rem;
     @include flex(row, space-between, center);
+
+    //same us signIn_link attribute in sign_up.scss
     .signUp_link {
       text-decoration: none;
       font-size: 1.4rem;
       color: $light_blue;
+      font-weight: bold;
       font-family: $poppins;
       -webkit-tap-highlight-color: transparent;
       &:hover {
@@ -74,23 +81,23 @@ all properties contained in other properties are sub-elements of that property i
       }
     }
   }
-} 
+}
 .page_content {
   .illustration {
-    background-color: $blue;
+    padding: 1.5rem 0;
     display: grid;
     justify-content: center;
-    padding: 1.5rem 0;
+    background-color: $blue;
     img {
       width: 18rem;
     }
   }
- 
+
   .forms_container {
     @include flex(column, center, center);
     padding-top: 2rem;
     .form {
-      color: rgb(0, 0, 0); 
+      color: rgb(0, 0, 0);
       min-width: 50%;
       font-family: $poppins;
       @include flex(column, center, center);
@@ -101,19 +108,22 @@ all properties contained in other properties are sub-elements of that property i
           text-align: center;
           font-weight: bold;
         }
+        h3 {
+          font-size: 2rem;
+        }
         .input_box {
-          margin: 2rem 0; 
+          margin: 2rem 0;
           border-radius: 40px;
           position: relative;
           @include flex(row, end, center);
           input {
-            @include dimensions(100%, 100%);
+            width: 100%;
             background: transparent;
             outline: none;
             border: 1.5px solid rgb(0, 0, 0);
             border-radius: 40px;
             font-size: 1.4rem;
-            color: black; 
+            color: black;
             font-family: $poppins;
             padding: 1.5rem 6rem 1.5rem 3rem;
           }
@@ -150,6 +160,13 @@ all properties contained in other properties are sub-elements of that property i
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
           margin-bottom: 2rem;
           font-family: $poppins;
+          p {
+            font-weight: bold;
+            &:hover {
+              transform: scale(1.2);
+              transition-duration: 0.5s;
+            }
+          }
         }
         .signup_link p {
           margin-bottom: 2rem;
@@ -178,17 +195,18 @@ all properties contained in other properties are sub-elements of that property i
         font-weight: bold;
         font-size: 1.6rem;
       }
-      .icons { 
-        min-width: 20rem;
+      .icons {
+        min-width: 15rem;
         padding: 0 0 2rem 0;
         @include flex(row, space-evenly, center);
         a {
           -webkit-tap-highlight-color: transparent;
           img {
-            width: 4rem;
+            width: 3rem;
           }
         }
       }
     }
   }
 }
+@include media.queries;

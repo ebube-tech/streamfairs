@@ -1,2 +1,12 @@
 @use "../constants/constants.scss" as *;
 @use "../mixins/mixins.scss" as *;
+
+@mixin queries {
+  @media screen and (min-width: $breakpoint-tablet) {
+    .navbar {
+      .pg_title {
+        font-size: 2rem;
+      }
+    }
+  }
+}

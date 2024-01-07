@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Streamfairs | Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/sign_up.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="navbar">
+        <p class="trademark">StreamFairs</p>
+        <div class="navbar_links">
+          <a class="signIn_link" href="sign_in.html" target="_parent">Sign In</a>
+          <div>
+            <a class="talk_to_sales_link" href="#" target="_parent"
+              >Talk To Sales</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="page_content">
+        <div class="illustration">
+          <img src="../assets/illustrations/undraw_video_call_re_4p26.svg" />
+        </div>
+        <div class="forms_container">
+          <div class="form">
+            <form action="#" method="post">
+              <h1>Sign Up</h1>
+              <div class="input_box">
+                <input type="email" placeholder="Email" required />
+                <i class="bx bxs-user"></i>
+              </div>
+              <div class="input_box">
+                <input type="password" placeholder="Password" required />
+                <i class="bx bxs-lock-alt"></i>
+              </div>
+              <div class="input_box">
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <i class="bx bxs-lock-alt"></i>
+              </div>
+              <button type="submit"><p>Sign Up</p></button>
+              <div class="signup_link">
+                <p>
+                  Already have an account?
+                  <a href="sign_in.html">Sign In</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="other_logins">
+            <p>Continue with</p>
+            <div class="icons">
+              <a href="#" target="_parent"
+                ><img src="../assets/icons/google.png"
+              /></a>
+              <a href="#" target="_parent"
+                ><img src="../assets/icons/facebook.png"
+              /></a>
+              <a href="#" target="_parent"
+                ><img src="../assets/icons/apple.png"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDU3nU0XLYTYW2NHkn3CxAaZ6f_iuXOePo",
+        authDomain: "streamfairs-debug.firebaseapp.com",
+        projectId: "streamfairs-debug",
+        storageBucket: "streamfairs-debug.appspot.com",
+        messagingSenderId: "1003265277795",
+        appId: "1:1003265277795:web:9ad4d648db2b0bb5de9d56",
+        measurementId: "G-WWBHYSEG9Z",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>

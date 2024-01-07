@@ -1,28 +1,30 @@
 @use "../constants/constants.scss" as *;
 @use "../mixins/mixins.scss" as *;
 
-//mobile screens-large
+@mixin queries {
+  //mobile screens-large
 
-//laptop screens and desktop screens-small
-@media screen and (min-width: 769px) {
-  .page_content{
-    @include flex(row, normal, normal);
-    .illustration{
-      min-height: calc(100svh - 65px);
-      flex: 2;
-      img{
-        padding-top: 20rem;
+  //large tablets and laptops
+  @media screen and (min-width: $breakpoint-tablet) {
+    .page_content {
+      @include flex(row, normal, normal);
+      .illustration {
+        min-height: calc(100svh - 65px);
+        flex: 2;
+        img {
+          padding-top: 20rem;
+        }
       }
-    }
-    .forms_container{
-      max-height: 60rem;
-      flex: 3;
-      .other_logins {
-        padding-bottom: 3rem;
+      .forms_container {
+        max-height: 60rem;
+        flex: 3;
+        .other_logins {
+          padding-bottom: 3rem;
+        }
       }
     }
   }
-}
-//desktop screens-large
+  //desktop screens-large
 
-//large scale devices
+  //large scale devices
+}

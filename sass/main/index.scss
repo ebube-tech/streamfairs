@@ -1,0 +1,78 @@
+@use "../constants/constants.scss" as *;
+@use "../mixins/mixins.scss" as *;
+@use "../mediaquery/index_MQ.scss" as media;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  height: -webkit-fill-availabe;
+}
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  user-select: none;
+  background-color: $white;
+}
+
+.navbar {
+  @include flex(row, space-between, center);
+  .trademark {
+    color: $blue;
+    font-family: $righteous;
+    font-size: 1.92rem;
+    padding: 1rem 1.5rem;
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 1s;
+    }
+  }
+  .navbar_links {
+    width: 15rem;
+    margin: 0 1.5rem;
+    @include flex(row, space-between, center);
+
+    //same us signIn_link attribute in sign_up.scss
+    .events_link {
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: $dark;
+      font-weight: bold;
+      font-family: $poppins;
+      -webkit-tap-highlight-color: transparent;
+      &:hover {
+        color: red;
+      }
+      &:active {
+        color: blue;
+      }
+    }
+    div {
+      background-color: $blue;
+      @include flex(column, center, normal);
+      border-radius: 3px;
+      padding: 0.5rem;
+    }
+    .get_started_link {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: $white;
+      font-family: $poppins;
+      font-weight: bold;
+      -webkit-tap-highlight-color: transparent;
+      &:hover {
+        font-size: 1.5rem;
+        transition-duration: 1s;
+      }
+      &:active {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+}
+
+@include media.queries;
