@@ -100,7 +100,7 @@ all properties contained in other properties are sub-elements of that property i
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
+  padding: 2rem 1.25rem;
 }
 .page_content .forms_container .form {
   color: rgb(0, 0, 0);

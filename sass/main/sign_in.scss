@@ -95,7 +95,7 @@ all properties contained in other properties are sub-elements of that property i
 
   .forms_container {
     @include flex(column, center, center);
-    padding-top: 2rem;
+    padding: 2rem 1.25rem;
     .form {
       color: rgb(0, 0, 0);
       min-width: 50%;
